@@ -1,0 +1,15 @@
+body{
+    background: #D1D1D1;
+}
+
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+th[scope="col"] {
+    background-color: #FB9100;
+    color: #fff;
+}
+caption{
+    font-size:1,6em;
+}

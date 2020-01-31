@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Liste des utilisateurs</title>
+	       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="TabListUserSupp.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<form action="/Supprimer" method="POST">
+	<table align="center">
+		<caption>Liste des utilisateurs</caption>
+		<tr>
+			<th scope="col">Nom</th>
+			<th scope="col">Prenom</th>
+			<th scope="col">Nom d'utilisateur</th>
+			<th scope="col">Mot de Passe</th>
+			<th scope="col">Fonction</th>
+			<th scope="col">Email</th>
+		</tr>
+		
+		 <tr th:each="user : ${result}">
+            <td><span><input type="checkbox" th:text="${user.nom}"  th:value="${user.id}" name="id"></span></td>
+            <td><span th:text="${user.prenom}"> Prenom </span></td>
+            <td><span th:text="${user.login}"> Login </span></td>
+            <td><span th:text="${user.motDePasse}"> password </span></td>
+            <td><span th:text="${user.fonction}"> fonction </span></td>
+            <td><span th:text="${user.mail}"> mail </span></td>
+        </tr>
+	</table>
+	
+	<input class="delete"type="submit" value="Supprimer">
+   </form>
+</body>
+
+</html>

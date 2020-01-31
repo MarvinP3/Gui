@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Liste des utilisateurs</title>
+	       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="TabListComposantModif.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<form action="/ModifierComp" method="PUT">
+	<table align="center">
+		<caption>Liste des composants</caption>
+		<tr>
+			<th scope="col">Nom</th>
+			<th scope="col">Description</th>
+			<th scope="col">Nom du serveur</th>
+			<th scope="col">Ip du serveur</th>
+		</tr>
+		
+		<tr th:each="composant , itemStat : *{result}">
+			<td><span><input type="hidden" name="id" th:value="${composant.id}">
+				<input type="text" th:field="*{result[__$itemStat.index}__].nom}">
+			</span></td>
+            <td><span th:text="${user.description}">Description </span></td>
+            <td><span th:text="${user.nomDuServeur}"> Nom du Serveur</span></td>
+            <td><span th:text="${user.ipDuServeur}"> Ip du serveur </span></td>
+        </tr>
+	</table>
+	<a href="/Composant" ><input class="save"type="button" value="Sauvegarder"></a>
+	
+	<input class="cancel"type="button" onclick='window.location.reload(false)' value="Annuler">
+	
+	
+	</form>
+</body>
+
+</html>

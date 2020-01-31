@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Formulaire d'ajout d'utilisateur</title>
+	<meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="FormulaireAdd.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<p class="logo">
+	      <a href="home.html"><img src="image/Logo.png" alt="Orange!" /></a>
+	</p>
+	<div id="container">
+		<strong><h1>Ajouter un utilisateur</h1></strong>
+	    <form action="/Ajouter" method="POST">
+	    <label><b>Nom</b></label>
+	    <input type="text" placeholder="Entrer le nom" name="firstname" required>
+			
+	    <label><b>Prenom</b></label>
+	    <input type="text" placeholder="Entrer le prenom" name="name" required>
+	
+	    <label><b>Nom d'utilisateur</b></label>
+        <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+        <label><b>Mot de passe</b></label>
+        <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+	
+	    <label><b>Fonction</b></label>
+        <input type="text" placeholder="Entrer la fonction" name="function" required>
+
+        <label><b>Mail</b></label>
+        <input type="text" placeholder="Entrer le mail" name="email" required>
+
+		<input type="submit" id="submit" value="Creer un nouvel utilisateur" >
+		</div>
+		</form>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+body {
+color:black;
+background-color:white;
+background-image:url(image/orange-abstract-7.jpg);
+ }
+
+ .logo{
+float:right;
+margin-bottom:80px;
+ }
+ /* Bordered form */
+form {
+    width:10%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 1.2;
+    user-select: none;
+    border-radius: 0;
+    background-color: darkorange;
+}

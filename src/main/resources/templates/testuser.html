@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Mkyong.com</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Spring Boot Web Thymeleaf Example</h1>
+        <h2>
+            <span th:text="'Hello, ' + ${message}"></span>
+        </h2>
+    </div>
+
+    <ol>
+        <li th:each="task : ${tasks}" th:text="${task}"></li>
+    </ol>
+    <table>
+	<caption>Liste des utilisateurs</caption>
+		<tr>
+			<th scope="col">Nom</th>
+			<th scope="col">Prenom</th>
+			<th scope="col">Nom d'utilisateur</th>
+			<th scope="col">Mot de Passe</th>
+			<th scope="col">Fonction</th>
+			<th scope="col">Email</th>
+		</tr>
+		
+		 <tr th:each="user : ${result}">
+            <td><span th:text="${user.nom}"> Nom</span></td>
+            <td><span th:text="${user.prenom}"> Prenom </span></td>
+            <td><span th:text="${user.login}"> Login </span></td>
+            <td><span th:text="${user.motDePasse}"> password </span></td>
+            <td><span th:text="${user.fonction}"> fonction </span></td>
+            <td><span th:text="${user.mail}"> mail </span></td>
+        </tr>
+		    
+    </table>
+
+</main>
+<!-- /.container -->
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Liste des utilisateurs</title>
+	       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="TabListUserModif.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<form action="/Modifier" method="PUT">
+	<table align="center">
+		<caption>Liste des utilisateurs</caption>
+		<tr>
+			<th scope="col">Nom</th>
+			<th scope="col">Prenom</th>
+			<th scope="col">Nom d'utilisateur</th>
+			<th scope="col">Mot de Passe</th>
+			<th scope="col">Fonction</th>
+			<th scope="col">Email</th>
+		</tr>
+		
+		<tr th:each="user , itemStat : *{result}">
+			<td><span><input type="hidden" name="id" th:value="${user.id}">
+				<input type="text" th:field="*{result[__$itemStat.index}__].nom}">
+			</span></td>
+            <td><span th:text="${user.prenom}"> Prenom </span></td>
+            <td><span th:text="${user.login}"> Login </span></td>
+            <td><span th:text="${user.motDePasse}"> password </span></td>
+            <td><span th:text="${user.fonction}"> fonction </span></td>
+            <td><span th:text="${user.mail}"> mail </span></td>
+        </tr>
+	</table>
+	<a href="/Utilisateur" ><input class="save"type="button" value="Sauvegarder"></a>
+	
+	<input class="cancel"type="button" onclick='window.location.reload(false)' value="Annuler">
+	
+	
+	</form>
+</body>
+
+</html>

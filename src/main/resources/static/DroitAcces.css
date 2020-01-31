@@ -1,0 +1,29 @@
+body{
+	background: #E3E5E3;
+}
+ .logo{
+float:right;
+margin-bottom:80px;
+ }
+h1{
+	font-style: oblique;
+	font-size:60px;
+	text-align:center;
+}
+.Ajouter{
+	float:left;
+	margin-right:150px;
+}
+.Modifier{
+	margin-right:130px;
+	margin-top: 16px;
+	float:left;
+}
+.Supprimer{
+	float:left;
+	margin-top:16px;
+}
+.Afficher{
+	float:right;
+	padding-bottom:900px;
+}

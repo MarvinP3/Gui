@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>Formulaire d'ajout de composant</title>
+	<meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="FormulaireComp.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<div id="container">
+		<strong><h1>Ajouter un nouveau composant</h1></strong>
+	    <form action="/AjouterComp" method="POST">
+	    <label><b>Nom</b></label>
+	    <input type="text" placeholder="Entrer le nom" name="name" required>
+			
+	    <label><b>Description</b></label>
+	    <input type="text" placeholder="Entrer la description" name="description" required>
+	
+	    <label><b>Nom du serveur</b></label>
+        <input type="text" placeholder="Entrer le nom du serveur" name="nameServer" required>
+
+        <label><b>Ip du serveur</b></label>
+        <input type="text" placeholder="Entrer l'ip du serveur" name="IpServer" required>
+	
+		<input type="submit" id="submit" value="Creer un nouveau composant" >
+		</div>
+		</form>
+</body>
+
+</html>

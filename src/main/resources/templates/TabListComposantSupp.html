@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Liste des composants</title>
+	       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="TabListComposantSupp.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<form action="/SupprimerComp" method="POST">
+	<table align="center">
+		<caption>Liste des composants</caption>
+		<tr>
+			<th scope="col">Nom</th>
+			<th scope="col">Description</th>
+			<th scope="col">Nom du serveur</th>
+			<th scope="col">Ip du serveur</th>
+		</tr>
+		
+		 <tr th:each="composant : ${result}">
+            <td><span><input type="checkbox" th:text="${composant.nom}"  th:value="${composant.id}" name="id"></span></td>
+            <td><span th:text="${composant.description}"></span></td>
+            <td><span th:text="${composant.nomDuServeur}"></span></td>
+            <td><span th:text="${composant.IpDuServeur}"></span></td>
+        </tr>
+	</table>
+	
+	<input class="delete"type="submit" value="Supprimer">
+   </form>
+</body>
+
+</html>
