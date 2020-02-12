@@ -1,6 +1,7 @@
 package com.orange.soamanager.gui.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.support.BasicAuthorizationInterceptor;
@@ -17,6 +18,7 @@ import com.orange.soamanager.gui.model.User;
 @Controller
 public class loginController {
 	@Autowired
+	@Qualifier("restTemplate")
 	private RestTemplate restTemplate;
 	
 	@Bean

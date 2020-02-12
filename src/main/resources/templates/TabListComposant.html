@@ -9,19 +9,18 @@
 
 <body>
 	<table align="center">
-		<caption>Liste des utilisateurs</caption>
+		<caption>Liste des composants</caption>
 		<tr>
-			<th scope="col">Nom</th>
+			
 			<th scope="col">Description</th>
 			<th scope="col">Nom du serveur</th>
 			<th scope="col">Ip du serveur</th>
 		</tr>
 		
 		 <tr th:each="composant : ${result}">
-            <td><span th:text="${composant.nom}"> Nom</span></td>
             <td><span th:text="${composant.description}"> Prenom </span></td>
             <td><span th:text="${composant.nomDuServeur}"> Login </span></td>
-            <td><span th:text="${composant.IpDuServeur}"> password </span></td>
+            <td><span th:text="${composant.ipDuServeur}"> password </span></td>
         </tr>
 	</table>
 	

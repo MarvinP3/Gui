@@ -12,6 +12,7 @@
 	<table align="center">
 		<caption>Liste des composants</caption>
 		<tr>
+		    <th scope="col"></th>
 			<th scope="col">Nom</th>
 			<th scope="col">Description</th>
 			<th scope="col">Nom du serveur</th>
@@ -20,9 +21,10 @@
 		
 		 <tr th:each="composant : ${result}">
             <td><span><input type="checkbox" th:text="${composant.nom}"  th:value="${composant.id}" name="id"></span></td>
+             <td><span th:text="${composant.nom}"></span></td>
             <td><span th:text="${composant.description}"></span></td>
             <td><span th:text="${composant.nomDuServeur}"></span></td>
-            <td><span th:text="${composant.IpDuServeur}"></span></td>
+            <td><span th:text="${composant.ipDuServeur}"></span></td>
         </tr>
 	</table>
 	
