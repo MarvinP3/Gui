@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<title>Formulaire d'ajout de composant</title>
+	<meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="FormulaireComp.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<div id="container">
+		<strong><h1>Modifier un composant</h1></strong>
+	   <form action="#" th:action="@{/ModifierComp/{id}(id=${composant.id})}" th:object="${composant}" method="post">
+	    <label for="name"><b>Description</b></label>
+        <input type="text" th:field="*{description}" id="description" placeholder="Description">
+	    
+	    <label for="name">Nom du serveur</label>
+        <input type="text" th:field="*{nomDuServeur}" id="nomDuServeur" placeholder="nomDuServeur">
+	    
+	    <label for="name">IP du serveur</label>
+        <input type="text" th:field="*{ipDuServeur}" id="ipDuServeur" placeholder="ipDuServeur">
+	    
+	     
+	
+		<input type="submit" id="submit" value="Modifier un composant" >
+		</div>
+		</form>
+</body>
+
+</html>

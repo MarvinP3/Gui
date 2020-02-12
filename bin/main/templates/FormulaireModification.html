@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Formulaire de modification d'utilisateur</title>
+	<meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="FormulaireAdd.css" media="screen" type="text/css" />
+</head>
+
+<body>
+	<p class="logo">
+	      <a href="home.html"><img src="image/Logo.png" alt="Orange!" /></a>
+	</p>
+	<div id="container">
+		<strong><h1>Modifier un utilisateur</h1></strong>
+	    <form action="#" th:action="@{/Modifier/{id}(id=${user.id})}" th:object="${user}" method="post">
+	    <label for="name"><b>Nom</b></label>
+        <input type="text" th:field="*{nom}" id="nom" placeholder="Nom">
+	    
+	    <label for="name">Prenom</label>
+        <input type="text" th:field="*{prenom}" id="prenom" placeholder="Prenom">
+	    
+	    <label for="name">Login</label>
+        <input type="text" th:field="*{login}" id="login" placeholder="Login">
+	    
+	      <label for="name">Mot de passe</label>
+        <input type="text" th:field="*{motDePasse}" id="motDePasse" placeholder="motDePasse">
+	       <label for="name">Fonction</label>
+        <input type="text" th:field="*{fonction}" id="fonction" placeholder="fonction">
+	    
+	    <label for="name">Mail</label>
+        <input type="text" th:field="*{mail}" id="mail" placeholder="mail">
+	    
+
+		<input type="submit" id="submit" value="Modifier cet utilisateur" >
+		</div>
+		</form>
+</body>
+
+</html>
